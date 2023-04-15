@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package carro;
+
+service CarroService {
+  rpc calcularValorTotal(CarroRequest) returns (CarroResponse) {}
+}
+
+message CarroRequest {
+  string placa = 1;
+  string renavan = 2;
+}
+
+message CarroResponse {
+  string codigo_barras = 1;
+  float valor_total = 2;
+}
